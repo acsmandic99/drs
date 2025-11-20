@@ -19,7 +19,9 @@ pipenv install
 
 U root direktorijumu napraviti fajl:
 
+```bash
 .env
+```
 
 i popuniti ga podacima prema lokalnoj MySQL konfiguraciji.
 Primer se nalazi u:
