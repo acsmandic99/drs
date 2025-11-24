@@ -92,3 +92,65 @@ Sistem treba da prikaže:
     poruku o pogrešnoj lozinki,
 
     poruku o nevalidnim podacima.
+## 🧪 Termin 03 – Uputstvo za pokretanje projekta
+
+### Python Flask Web API
+### Korak 1: Rekreirati virtuelno okruženje
+
+Na osnovu *Pipfile* i *Pipfile.lock*:
+
+```bash
+pipenv install
+```
+
+### Korak 2: Kreirati .env fajl
+
+U root direktorijumu napraviti fajl:
+
+```bash
+.env
+```
+
+i popuniti ga podacima prema lokalnoj MongoDB konfiguraciji.
+Primer se nalazi u:
+
+```bash
+.env.example
+```
+
+### Korak 3: Pokrenuti projekat
+
+```bash
+pipenv shell
+
+python run.py
+```
+### Reacr
+### Korak 1: Instalacija zavisnosti
+
+Na osnovu *package.json* i *package-lock.json*:
+
+```bash
+npm install
+```
+
+### Korak 2: Kreirati .env fajl
+
+U root direktorijumu napraviti fajl:
+
+```bash
+.env
+```
+
+i popuniti ga podacima prema lokalnoj konfiguraciji.
+Primer se nalazi u:
+
+```bash
+.env.example
+```
+
+### Korak 3: Pokrenuti projekat
+
+```bash
+npm run dev
+```
