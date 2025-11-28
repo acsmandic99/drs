@@ -1,5 +1,6 @@
 //Reusable button
 import { type ReactNode, type ButtonHTMLAttributes } from "react";
+import clsx from "clsx";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "danger";
@@ -41,4 +42,20 @@ export const Button: React.FC<ButtonProps> = ({
     md: "h-5 w-5",
     lg: "h-6 w-6",
   };
+    return (
+    <button
+      type={type}
+      disabled={disabled || loading}
+      className={clsx(baseStyles, variantStyles[variant], sizeStyles[size], className)}
+      {...props}
+        >
+          {loading ? (
+        <>
+          {leftIcon && <span className="flex-shrink-0">{leftIcon}</span>}
+          <span>{children}</span>
+          {rightIcon && <span className="flex-shrink-0">{rightIcon}</span>}
+        </>
+      ) : ()}
+        </button>
+    );
 };
