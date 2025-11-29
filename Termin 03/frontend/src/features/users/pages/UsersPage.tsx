@@ -4,6 +4,7 @@ import { UserForm } from "../components/UserForm";
 import { getUsers } from "../services/userService";
 import type { User } from "../types";
 import { Button } from "../../../components/Button";
+import { FiChevronDown } from "react-icons/fi";
 
 export default function UsersPage() {
   const [users, setUsers] = useState<User[]>([]);
@@ -40,11 +41,15 @@ export default function UsersPage() {
           onClick={() => setShowForm((prev) => !prev)}
           variant="primary"
           size="sm"
+          rightIcon={
+            <FiChevronDown 
+              className={`transition-transform ${showForm ? "rotate-180" : ""}`}
+            />
+          }
         >
-          {showForm ? "Hide Form ▲" : "Show Form ▼"}
+          {showForm ? "Hide Form" : "Add User"}
         </Button>
-      </div>
-
+    </div>
       {showForm && <UserForm onUserAdded={handleUserAdded} />}
 
       {loading ? <p>Loading users...</p> : <UserList users={users} />}

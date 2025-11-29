@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { sendContactMessage } from "../services/contactService";
 import { Button } from "../../../components/Button";
+import { FiSend } from "react-icons/fi";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -91,6 +92,7 @@ export default function ContactPage() {
           type="submit" 
           variant="primary" 
           size="md"
+          leftIcon={<FiSend />}
           loading={status === "Sending..."}
         >
           Send Message
