@@ -1,6 +1,7 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { createUser } from "../services/userService";
 import { Button } from "../../../components/Button";
+import { FiUserPlus } from "react-icons/fi";
 
 interface UserFormProps {
   onUserAdded?: () => void;
@@ -138,6 +139,10 @@ export const UserForm: React.FC<UserFormProps> = ({ onUserAdded }) => {
         type="submit" 
         variant="primary" 
         size="md"
+        leftIcon={<FiUserPlus />}   //below are other possible icons, just need different import
+        //leftIcon={<FiUserCheck />}
+        //leftIcon={<FiSave />}
+        //leftIcon={<FiCheck />}
         loading={status === "Sending..."}
       >
         Add User
