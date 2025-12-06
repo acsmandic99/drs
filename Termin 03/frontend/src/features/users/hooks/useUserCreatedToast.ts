@@ -3,7 +3,7 @@ import { io, Socket } from "socket.io-client";
 import { toast } from "react-toastify";
 import type { User } from "../types";
 
-const SOCKET_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:5000";
 
 interface UseUserCreatedToastProps {
   onUserCreated?: () => void;
